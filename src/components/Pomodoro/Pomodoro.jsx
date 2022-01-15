@@ -3,10 +3,10 @@ import React, { useState, useRef, useEffect } from 'react';
 // Import styled components
 import styled from 'styled-components';
 // Import image
-import GearIcon from '../../assets/images/gear.svg';
-import CheckIcon from '../../assets/images/check.svg';
+import gearicon from '../../assets/images/gear.svg';
+import checkicon from '../../assets/images/check.svg';
 // Import audio
-import Alarm from '../../assets/audio/ring.mp3';
+import alarm from '../../assets/audio/ring.mp3';
 
 const Wrapper = styled.div`
   align-items: center;
@@ -136,7 +136,7 @@ function Pomodoro() {
   const mCounter = useRef(null);
   const sCounter = useRef(null);
 
-  const song = new Audio(Alarm);
+  const song = new Audio(alarm);
 
   const playSong = () => {
     song.play();
@@ -240,9 +240,9 @@ function Pomodoro() {
         <Start onClick={onClickStart}>{!start ? 'start' : 'stop'}</Start>
         <Settings onClick={onClickSet}>
           {settings ? (
-            <Gear src={CheckIcon} alt="Checked" />
+            <Gear src={checkicon} alt="Checked" />
           ) : (
-            <Gear src={GearIcon} alt="Settings" />
+            <Gear src={gearicon} alt="Settings" />
           )}
         </Settings>
       </Timer>
