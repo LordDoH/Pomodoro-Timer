@@ -4,6 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 // Import Pomodoro Timer
 import Pomodoro from './Pomodoro/Pomodoro';
+import Footer from './Footer/Footer';
 
 const Main = styled.div`
   align-items: center;
@@ -12,15 +13,18 @@ const Main = styled.div`
   justify-content: center;
   margin: 0;
   min-height: 100vh;
-  min-width: 100vw;
+  min-width: 100%;
   padding: 0;
 `;
 
 function Clock() {
   return (
-    <Main>
-      <Pomodoro />
-    </Main>
+    <>
+      <Main>
+        <Pomodoro />
+      </Main>
+      <Footer />
+    </>
   );
 }
 
